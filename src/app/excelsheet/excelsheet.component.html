@@ -1,0 +1,17 @@
+<p>excelsheet works!</p>
+
+<input type="file" multiple="false"  (change)="onFileChange($event)"/>
+
+<table>
+    <tbody>
+        <tr *ngFor="let row of data">
+            <td *ngFor="let cell of row">
+                {{cell}}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div *ngIf="willDownload">
+	<a id="download"> Download JSON File </a>
+</div>
